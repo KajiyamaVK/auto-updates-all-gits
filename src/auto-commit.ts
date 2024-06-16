@@ -12,6 +12,7 @@ async function remoteRepoExists(repoUrl: TaskOptions): Promise<boolean> {
   try {
     await git.listRemote(repoUrl)
     return true
+    // eslint-disable
   } catch (error: any) {
     console.error(`Remote repository ${repoUrl} does not exist:`, error.message)
     return false
